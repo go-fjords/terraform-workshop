@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/adventure-tech.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="logo">
+				<img src="img/logo.svg" />
+			</div>
+			<div class="logo--background">
+				<img class="logo--background__img" src="img/logo.svg" />
+			</div>
+			<div class="slides">
+				<section>
+					<h1>Terraform</h1>
+				</section>
+				<section>
+					<blockquote>
+						Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files.
+					</blockquote>
+					https://www.terraform.io/
+				</section>
+				<section>
+					<h2>Flow</h2>
+					<ul>
+						<li>Write</li>
+						<li>Plan</li>
+						<li>Apply</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Building blocks</h2>
+					<ul>
+						<li>Variables</li>
+						<li>Locals</li>
+						<li>Attributes</li>
+						<li>Resources</li>
+						<li>Modules</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Variables</h2>
+					</section>
+					<section>
+						<h3>Strings</h3>
+						<pre>
+							<code class="tf" data-line-numbers="1|2|3">variable "name" {
+	type = string
+	default = "Fridtjof Nansen"
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Map</h3>
+						<pre>
+							<code class="tf" data-line-numbers="2|3-6">variable "name" {
+	type = map(string)
+	default = {
+		first = "Fridtjof"
+		last = "Nansen"
+	}
+}
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Locals</h2>
+					</section>
+					<section>
+						<h3>Strings</h3>
+						<pre>
+							<code class="tf" data-line-numbers="1|2|3">locals {
+	adventurers = ["Fridtjof Nansen", "Roald Amundsen"]
+	techs = ["Margaret Hamilton", "Steve Wozniak"]
+}
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Resources</h2>
+					</section>
+					<section>
+						<h3>Google Service Account</h3>
+						<pre>
+							<code class="tf" data-line-numbers="1|2|3|4">resource "google_service_account" "fridtjof_nansen" {
+	account_id   = "fridtjof-nansen"
+	display_name = "Fridtjof Nansen"
+	description  = "Famous Norwegian explorer and diplomat"
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Refering to variables and locals</h3>
+						<pre>
+							<code class="tf" data-line-numbers="3|4">resource "google_service_account" "fridtjof_nansen" {
+	account_id   = "fridtjof-nansen"
+	display_name = var.name
+	description  = local.adventurers[0]
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Refering to other resources</h3>
+						<pre>
+							<code class="tf" data-line-numbers="4">resource "google_service_account" "fridtjof_nansen" {
+	account_id   = "fridtjof-nansen"
+	display_name = "Fridtjof Nansen"
+	description  = "Wife: ${google.service_account.eva.display_name}"
+}
+							</code>
+						</pre>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/terraform.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				highlight: {
+					beforeHighlight: hljs => {
+						hljs.registerLanguage('terraform', window.hljsDefineTerraform);
+					}
+				},
+			});
+		</script>
+	</body>
+</html>
