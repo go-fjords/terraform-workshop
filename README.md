@@ -1,5 +1,9 @@
 # Terraform Workshop
 
+<div style="background-color: rgba(17, 61, 144, 1); padding: 20px; margin-bottom: 1em">
+    <img src="./presentation/img/logo.svg">
+</div>
+
 In this workshop you will be learning to provision some infrastructure on Google Cloud using Terraform.
 
 ## Prerequisites
