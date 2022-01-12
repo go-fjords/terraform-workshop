@@ -158,7 +158,7 @@ You can test opening the URL listed under the `Trigger` tab on your function's p
 If you are anything like the Roman senator Marcus Porcius Cato you just want to tear it all down.
 When you find that you are no longer in need of your infrastructure Terraform has a handy function to delete all resources you've created.
 
-Use the `terraform -help` command to list available commands and tear down your infraastructure.
+Use the `terraform -help` command to list available commands and tear down your infrastructure.
 
 ### 8. Rome wasn't built in a day, but only because they didn't have Terraform
 
