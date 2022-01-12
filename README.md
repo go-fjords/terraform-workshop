@@ -57,6 +57,10 @@ That way you see errors more quickly and can solve them before moving on.
 Please use a prefix for all google resource names, e.g. `myfirstname-resource-name`.
 This will prevent your resources from colliding with the other workshop participants' names.
 
+You should use the `random-adventurer.tf` file to solve the tasks.
+
+Before solving task 1 run `terraform init` and then `terraform apply` to make sure your setup works.
+
 ### 1. Google Service Account
 
 Every service in google runs as a [Google Service Account](https://cloud.google.com/iam/docs/service-accounts) with specific priveleges attached.
