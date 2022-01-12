@@ -1,15 +1,20 @@
 terraform {
   required_providers {
+    archive = {
+      source = "hashicorp/archive"
+      version = "2.2.0"
+    }
     google = {
       source  = "hashicorp/google"
-      version = "4.5.0"
+      version = "4.6.0"
     }
   }
 }
 
 provider "google" {
-  project     = var.gcloud_project_ids[terraform.workspace]
-  region      = var.gcloud_region
-  # Not sure if we are using zones anywhere
-  zone = "europe-west1-a"
+  project     = "adventure-tech-workshop"
+  region      = "europe-west1"
+}
+
+provider "archive" {
 }

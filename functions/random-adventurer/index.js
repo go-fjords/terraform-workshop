@@ -11,6 +11,6 @@ const adventurers = [
  * @param {!express:Request} req HTTP request context.
  * @param {!express:Response} res HTTP response context.
  */
- exports.helloWorld = (req, res) => {
+ exports.randomAdventurer = (req, res) => {
     res.status(200).send(adventurers[Math.floor(Math.random() * adventurers.length)]);
 };
