@@ -4,4 +4,4 @@ random-adventurer-solution.tf
 .terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup
-/dist
+presentation/dist
