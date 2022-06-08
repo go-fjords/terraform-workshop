@@ -57,6 +57,20 @@ That way you see errors more quickly and can solve them before moving on.
 Please use a prefix for all google resource names, e.g. `myfirstname-resource-name`.
 This will prevent your resources from colliding with the other workshop participants' names.
 
+Clone this repository:
+
+```sh
+git clone https://github.com/go-fjords/terraform-workshop.git
+
+# or
+
+git clone git@github.com:go-fjords/terraform-workshop.git
+
+# then
+
+cd terraform-workshop
+```
+
 You should use the `random-adventurer.tf` file to solve the tasks.
 
 Before solving task 1 run `terraform init` and then `terraform apply` to make sure your setup works.
