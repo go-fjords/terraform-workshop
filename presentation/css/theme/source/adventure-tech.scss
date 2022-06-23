@@ -62,34 +62,27 @@ $selectionBackgroundColor: $magenta;
 @import "../template/theme";
 // ---------------------------------------------
 
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .reveal {
-    @keyframes gradientBackground {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        66% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
     background: linear-gradient(-45deg, #113d90, #6a82fb, #05dfd7);
     background-size: 600% 400%;
     animation: gradientBackground 30s ease infinite;
+}
+
+.reveal blockquote {    
+    background:none;
 }
 
 
@@ -163,7 +156,7 @@ $selectionBackgroundColor: $magenta;
 
 .logo {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 3%;
+    left: 3%;
     width: 20%;
 }

@@ -9,9 +9,6 @@ In this workshop you will be learning to provision some infrastructure on Google
 
 Preferably do these before the workshop.
 
-[A Google Account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp) is necessary to work with Google Cloud.
-Register with your work email by cliking "Use my current email address instead".
-
 For this workshop we will be using the [adventure-tech-workshop](https://console.cloud.google.com/home/dashboard?project=adventure-tech-workshop) project. Ask @snorremd for access.
 
 ### Docker remote container setup with Visual Studio Code
