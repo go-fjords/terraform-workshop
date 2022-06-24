@@ -11,6 +11,20 @@ Preferably do these before the workshop.
 
 For this workshop we will be using the [adventure-tech-workshop](https://console.cloud.google.com/home/dashboard?project=adventure-tech-workshop) project. Ask @snorremd for access.
 
+### Clone the repository
+
+```sh
+git clone https://github.com/go-fjords/terraform-workshop.git
+
+# or
+
+git clone git@github.com:go-fjords/terraform-workshop.git
+
+# then
+
+cd terraform-workshop
+```
+
 ### Docker remote container setup with Visual Studio Code
 
 I've created a Dockerfile which allows you to run a development environment in [Docker](https://www.docker.com).
@@ -22,6 +36,7 @@ Install:
     - Windows users must have [Windows Subsystem for Linux](https://code.visualstudio.com/docs/remote/containers#_system-requirements).
 - [VSCode editor](https://code.visualstudio.com).
 - [VSCode Terraform extension](https://marketplace.visualstudio.com/items?itemName=hashicorp.terraform)
+- [VSCode Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 Now you can run `Remote-Containers: Reopen in container` from the VSCode command palette or by clicking the green button in the bottom left corner labeled `Open a remote window`.
 
@@ -53,20 +68,6 @@ That way you see errors more quickly and can solve them before moving on.
 
 Please use a prefix for all google resource names, e.g. `myfirstname-resource-name`.
 This will prevent your resources from colliding with the other workshop participants' names.
-
-Clone this repository:
-
-```sh
-git clone https://github.com/go-fjords/terraform-workshop.git
-
-# or
-
-git clone git@github.com:go-fjords/terraform-workshop.git
-
-# then
-
-cd terraform-workshop
-```
 
 You should use the `random-adventurer.tf` file to solve the tasks.
 
