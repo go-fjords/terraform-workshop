@@ -40,6 +40,11 @@ Install:
 
 Now you can run `Remote-Containers: Reopen in container` from the VSCode command palette or by clicking the green button in the bottom left corner labeled `Open a remote window`.
 
+#### Mac M1 (arm64) processor users
+
+Hashicorp does not provide prebuilt binaries of Terraform for Mac M1 (arm64) processors.
+The remote container setup will not work for you at this time.
+Refer to the [Setup tools yourself](#setup-tools-yourself) for how to install the tooling locally.
 
 ### Setup tools yourself
 
