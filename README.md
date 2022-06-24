@@ -56,6 +56,13 @@ Install
 
 Make sure you have the latest versions of terraform and gcloud.
 
+Mac users:
+
+```sh
+brew install terraform
+brew install --cask google-cloud-sdk
+```
+
 ---
 
 ## Tasks
